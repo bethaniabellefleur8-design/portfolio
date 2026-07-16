@@ -7,14 +7,14 @@
 }
 
 body {
-  background-color:#ECFAE5;
+  background-color: #ECFAE5;
   color: #0b0b0b;
   line-height: 1.6;
 }
 
 /* Barre de navigation fixe en haut */
 nav {
-  background-color:#B0DB9C;
+  background-color: #B0DB9C;
   padding: 15px;
   position: sticky;
   top: 0;
@@ -60,7 +60,7 @@ h2 {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid  #B0DB9C;
+  border: 4px solid #B0DB9C;
 }
 
 /* Grille responsive pour les deux projets */
@@ -95,7 +95,7 @@ h2 {
 
 /* Style des zones API Citation et TODO list */
 .widget {
-  background:#CAE8BD;
+  background: #CAE8BD;
   padding: 20px;
   border-radius: 8px;
   margin-top: 20px;
@@ -195,5 +195,221 @@ footer {
   nav a {
     display: inline-block;
     margin: 5px 10px;
+  }
+}
+
+
+/* AMIS STYLE */
+/* --- STYLE GÉNÉRAL --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+  background-color: #c0d7ef;
+}
+
+/* Barre de navigation responsive */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgb(202, 228, 243);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  stroke-width: top;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #555;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+.btn-nav {
+  background: #3498db;
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+/* Section de présentation principale (Hero) */
+.hero {
+  background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://via.placeholder.com/1200x600') no-repeat center/cover;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto 30px auto;
+  opacity: 0.9;
+}
+
+/* Styles des boutons */
+.btn-principal {
+  display: inline-block;
+  background: #e67e22;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-principal:hover {
+  background: #d35400;
+}
+
+/* Structure des sections de la page */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+/* Grille responsive pour le concept (3 colonnes) */
+.grille-concept {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.carte-concept {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.carte-concept h3 {
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+/* Grille responsive pour les membres (2 colonnes) */
+.section-grise {
+  background-color: #f2f4f7;
+  max-width: 100%;
+}
+
+.grille-membres {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.carte-membre {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.carte-membre img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.badge {
+  display: inline-block;
+  background: #e8f4fd;
+  color: #3498db;
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Section d'inscription bleue */
+.section-bleue {
+  background: #2c3e50;
+  color: white;
+  max-width: 100%;
+}
+
+.section-bleue h2 {
+  color: white;
+}
+
+.section-bleue p {
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+form input {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Pied de page */
+footer {
+  background: #1a252f;
+  color: #7f8c8d;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* DESIGNS RESPONSIVES POUR MOBILES */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .menu a {
+    margin: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
   }
 }

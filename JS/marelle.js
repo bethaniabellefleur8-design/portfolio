@@ -1,7 +1,7 @@
 // --- VARIABLES GLOBALES ---
 let niveauActuel = 1; // Représente l'étape en cours (de 1 à 10) et la case où se trouve le caillou
 let etapeSaut = 1;    // Le numéro de la case sur laquelle le joueur doit sauter
-let jeuEnCours = false; 
+let jeuEnCours = false;
 let tempsRestant = 2; // Difficulté : 2 secondes maximum par saut
 let chrono;           // Variable qui va stocker le compte à rebours
 
@@ -10,18 +10,18 @@ function lancerTour() {
     if (niveauActuel > 10) niveauActuel = 1; // Recommence à 1 si les 10 niveaux sont finis
     nettoyerTableau(); // Efface les couleurs du tour précédent
     etapeSaut = 1;     // Réinitialise le premier saut à la case 1
-    
+
     // RÈGLE : Si le caillou est sur la case 1, le premier saut obligatoire se fait sur la case 2
     if (etapeSaut === niveauActuel) {
         etapeSaut = 2;
     }
 
     jeuEnCours = true;
-    
+
     // Place le caillou visuellement sur la case du niveau en cours
     document.getElementById(`case-${niveauActuel}`).innerText = "🪨";
     document.getElementById('statut').innerText = `Niveau ${niveauActuel}/10. Sautez de 1 à 10 en évitant la case ${niveauActuel} !`;
-    
+
     demarrerChrono(); // Active la difficulté de temps
 }
 
@@ -30,12 +30,12 @@ function demarrerChrono() {
     clearInterval(chrono); // Arrête le chronomètre précédent s'il y en avait un
     tempsRestant = 2;      // Donne 2 secondes au joueur
     document.getElementById('timer').innerText = `Temps restant : ${tempsRestant}s`;
-    
+
     // Déclenche un décompte toutes les 1 seconde (1000 millisecondes)
     chrono = setInterval(() => {
         tempsRestant--;
         document.getElementById('timer').innerText = `Temps restant : ${tempsRestant}s`;
-        
+
         // Si le temps arrive à zéro, le joueur perd la partie
         if (tempsRestant <= 0) {
             clearInterval(chrono);
@@ -73,7 +73,7 @@ function clicCase(numeroCase) {
             clearInterval(chrono); // Arrête le temps
             document.getElementById('case-ciel').style.backgroundColor = "#2ecc71";
             jeuEnCours = false;
-            
+
             if (niveauActuel === 10) {
                 document.getElementById('statut').innerText = "Incroyable ! Vous avez terminé les 10 niveaux avec succès ! 🏆🎉";
             } else {
