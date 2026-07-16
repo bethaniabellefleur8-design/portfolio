@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Marelle Stricte 1-10</title>
+    <style>
+        /* CSS : Style général et mise en page de la marelle */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f3f6;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        /* Zone d'informations (Statut et Chronomètre) */
+        #statut {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #e67e22;
+        }
+
+        #timer {
+            font-size: 22px;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Grille verticale inversée (le 1 est en bas, le Ciel en haut) */
+        .marelle {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        /* Case simple (un seul carré) */
+        .case-simple {
+            width: 100px;
+            height: 55px;
+            border: 3px solid #2c3e50;
+            background: white;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 49px;
+            cursor: pointer;
+        }
+
+        /* Rangée double (deux carrés côte à côte) */
+        .rangee-double {
+            display: flex;
+            width: 200px;
+            height: 55px;
+        }
+
+        .rangee-double .case {
+            width: 100px;
+            height: 55px;
+            border: 3px solid #2c3e50;
+            background: white;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 49px;
+            cursor: pointer;
+        }
+
+        /* Case finale : Le Ciel */
+        .ciel {
+            width: 200px;
+            height: 60px;
+            border: 3px solid #2c3e50;
+            border-radius: 50% 50% 0 0;
+            background: #3498db;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 54px;
+        }
+
+        /* Bouton pour lancer le caillou */
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>MARELLE STRICTE (1 à 10) ☀️</h1>
+    <!-- Affiche les consignes et le niveau en cours -->
+    <div id="statut">Cliquez sur le bouton pour commencer le Niveau 1</div>
+    <!-- Affiche la difficulté (le temps restant) -->
+    <div id="timer">Temps : -</div>
+
+    <!-- La structure complète de la marelle graduée de 1 à 10 -->
+    <div class="marelle">
+        <!-- Cases 1 et 2 (Double) -->
+        <div class="rangee-double">
+            <div class="case" id="case-1" onclick="clicCase(1)">1</div>
+            <div class="case" id="case-2" onclick="clicCase(2)">2</div>
+        </div>
+
+        <!-- Case 3 (Simple) -->
+        <div class="case-simple" id="case-3" onclick="clicCase(3)">3</div>
+
+        <!-- Cases 4 et 5 (Double) -->
+        <div class="rangee-double">
+            <div class="case" id="case-4" onclick="clicCase(4)">4</div>
+            <div class="case" id="case-5" onclick="clicCase(5)">5</div>
+        </div>
+
+        <!-- Case 6 (Simple) -->
+        <div class="case-simple" id="case-6" onclick="clicCase(6)">6</div>
+
+        <!-- Cases 7 et 8 (Double) -->
+        <div class="rangee-double">
+            <div class="case" id="case-7" onclick="clicCase(7)">7</div>
+            <div class="case" id="case-8" onclick="clicCase(8)">8</div>
+        </div>
+
+        <!-- Cases 9 et 10 (Double) -->
+        <div class="rangee-double">
+            <div class="case" id="case-9" onclick="clicCase(9)">9</div>
+            <div class="case" id="case-10" onclick="clicCase(10)">10</div>
+        </div>
+
+        <!-- Le Ciel -->
+        <div class="ciel" id="case-ciel">CIEL ☁️</div>
+    </div>
+
+    <button onclick="lancerTour()">Lancer le caillou 🪨</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

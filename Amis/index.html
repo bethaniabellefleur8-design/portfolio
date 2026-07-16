@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmiLien - Se faire des amis à distance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Barre de navigation supérieure -->
+    <nav>
+        <div class="logo">AmiLien </div>
+        <div class="menu">
+            <a href="#concept">Concept</a>
+            <a href="#membres">Membres</a>
+            <a href="#inscription" class="btn-nav">Rejoindre</a>
+        </div>
+    </nav>
+
+    <!-- SECTION 1 : ACCUEIL / HERO (Première impression forte) -->
+    <header class="hero">
+        <h1>Créez des amitiés sincères, peu importe la distance.</h1>
+        <p>Connectez-vous avec des personnes qui partagent vos passions, vos études ou vos projets partout dans le
+            monde.</p>
+        <a href="#inscription" class="btn-principal">Créer un profil gratuit</a>
+    </header>
+
+    <!-- SECTION 2 : LE CONCEPT (Comment ça fonctionne) -->
+    <section id="concept" class="section-blanche">
+        <h2>Comment ça marche ?</h2>
+        <div class="grille-concept">
+            <div class="carte-concept">
+                <h3>1. Créez votre profil</h3>
+                <p>Ajoutez vos centres d'intérêt, vos langues parlées et vos aspirations professionnelles ou
+                    personnelles.</p>
+            </div>
+            <div class="carte-concept">
+                <h3>2. Matcher par passions</h3>
+                <p>Notre système vous propose des profils compatibles avec vos goûts (informatique, coiffure, voyages,
+                    etc.).</p>
+            </div>
+            <div class="carte-concept">
+                <h3>3. Discutez en sécurité</h3>
+                <p>Échangez par messages textuels ou appels vidéo grâce à une plateforme modérée et totalement
+                    sécurisée.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 : LES MEMBRES (Aperçu des profils) -->
+    <section id="membres" class="section-grise">
+        <h2>Faites comme eux, brisez la distance</h2>
+        <div class="grille-membres">
+            <!-- Exemple de profil 1 -->
+            <div class="carte-membre">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.GQUPMvH0erNNABonzwSK0AHaJ4?r=0&pid=Api&h=220&P=0"
+                    alt="Profil de membre">
+                <h4>Thomas, 22 ans</h4>
+                <p class="badge">💻 Informatique</p>
+                <p>"J'ai trouvé un super binôme d'études à distance pour réviser mes examens de réseau !"</p>
+            </div>
+            <!-- Exemple de profil 2 -->
+            <div class="carte-membre">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.8eTFLx-7h-70zzdX5VqM9QHaLH?r=0&pid=Api&h=220&P=0"
+                    alt="Profil de membre">
+                <h4>Mélissa, 25 ans</h4>
+                <p class="badge">🎨 Créativité</p>
+                <p>"Passionnée de coiffure, j'échange chaque semaine avec des créateurs du monde entier."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 : INSCRIPTION (Appel à l'action final) -->
+    <section id="inscription" class="section-bleue">
+        <h2>Prêt à élargir votre cercle d'amis ?</h2>
+        <p>L'inscription prend moins de deux minutes.</p>
+        <form onsubmit="alert('Merci pour votre inscription ! (Démonstration)'); return false;">
+            <input type="text" placeholder="Votre prénom" required>
+            <input type="email" placeholder="Votre adresse email" required>
+            <button type="submit" class="btn-principal">Commencer l'aventure</button>
+        </form>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 AmiLien. Tous droits réservés.</p>
+        <div class="liens-footer">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+        </div>
+
+</body>
+
+</html>

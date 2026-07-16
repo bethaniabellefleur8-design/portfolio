@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Permet de rendre le site responsive sur mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Professionnel - Bethania</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Barre de navigation -->
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+        <a href="#cv">Mon CV / Blog</a>
+    </nav>
+
+    <!-- SECTION 1 : ACCUEIL -->
+    <section id="accueil">
+        <div class="accueil-contenu">
+            <!-- Présentation à gauche -->
+            <div class="texte-accueil">
+                <h1>Bonjour, je suis Bethania Belle Fleur</h1>
+                <p>
+                <h3><br>Mon profil :<br></h3>
+                Étudiante en techniques de l'informatique à la ST Francis School of Technology, je suis passionnée
+                par la configuration des réseaux et l'administration système. Mon parcours est unique : j'allie la
+                logique rigoureuse de l'informatique à la minutie et la créativité de mon diplôme de coiffeuse
+                spécialisée en dreadlocks. Que ce soit pour structurer un réseau VLAN complexe ou réaliser une
+                coiffure détaillée, j'apporte la même précision et le même soin au travail bien fait.</p>
+                <p>
+
+                <h3><br>Mes objectifs :<br></h3>
+                Je suis actuellement à la recherche d'un stage ou d'un emploi en informatique. Mon objectif est de
+                mettre en pratique mes compétences sur Cisco Packet Tracer, Windows Server et le développement web
+                au sein d'une équipe dynamique, tout en continuant à relever de nouveaux défis technologiques.</p>
+                <h3><br>Mes Compétences :<br></h3>
+                <p>HTML, CSS, JavaScript, Cisco Packet Tracer, Windows Server.</p>
+            </div>
+            <!-- Photo de profil à droite (remplacez l'URL par votre image sur GitHub) -->
+            <img src="C:\Users\Me Constant\Pictures\Screenshots\Screenshot 2026-04-21 133332.png"
+                alt="Photo de Bethania" class="photo-profil">
+        </div>
+    </section>
+
+    <!-- SECTION 2 : PROJETS -->
+    <section id="projets">
+        <h2>Mes Projets</h2>
+
+        <div class="liste-projets">
+            <!-- Projet 1 : Jeu de cartes -->
+            <div class="carte-projet">
+                <img src="C:\Users\Me Constant\Pictures\Screenshot 2026-07-13 103203.png" alt="Capture Jeu de Cartes">
+                <h3>Jeu de Marelle</h3>
+                <p>Un jeu de cartes interactif développé pour pratiquer la logique en JavaScript.</p>
+                <p><strong>Technologies :</strong> HTML, CSS, JavaScript</p>
+                <a href="C:\Users\Me Constant\Downloads\lily\Jeu_Marelle\index.html" target="_blank">voir le site</a>
+            </div>
+
+            <!-- Projet 2 : Conseils sur la vie -->
+            <div class="carte-projet">
+                <img src="C:\Users\Me Constant\Pictures\Screenshot 2026-07-13 112823.png" alt="Capture Site Motivation">
+                <h3>Brisez la distance </h3>
+                <p> Une page de présentation moderne et hautement professionnelle conçue pour une
+                    plateforme de mise en relation amicale à distance. Le site présente clairement le concept
+                    d'utilisation, met en valeur les témoignages de la communauté grâce à des fiches de profils ciblées,
+                    et propose un formulaire d'inscription direct pour engager l'utilisateur.</p>
+                <p><strong>Technologies :</strong> HTML, CSS</p>
+                <a href="C:\Users\Me Constant\Downloads\lily\Amis\index.html" target="_blank">voir le site</a>
+            </div>
+        </div>
+        <div class="carte-projet">
+
+
+            <!-- Étape 1 : L'image de votre topologie réseau -->
+            <div class="projet-image" style="text-align: center; margin-bottom: 20px;">
+                <img src="C:\Users\Me Constant\Pictures\Screenshot 2026-07-13 111620.png"
+                    alt="Topologie réseau Cisco Packet Tracer"
+                    style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+
+            <!-- Étape 2 : Les détails techniques -->
+            <div class="projet-details">
+                <h3>Architecture Réseau d'Entreprise
+                    Sécurisée</h3>
+                <p>
+                    Conception et déploiement d'une infrastructure réseau complète simulant une entreprise multi-sites.
+                    Ce projet met en œuvre le routage inter-VLAN, la distribution dynamique d'adresses et la
+                    sécurisation des accès aux serveurs.
+                </p>
+
+
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Mini-application 1 : Générateur de Citations (API) -->
+        <div class="widget">
+            <h3>Citation Inspirante (Via API)</h3>
+            <p id="texte-citation">"Cliquez sur le bouton pour charger une citation..."</p>
+            <h4 id="auteur-citation"></h4>
+            <button onclick="chargerCitation()">Nouvelle citation</button>
+        </div>
+
+        <!-- Mini-application 2 : TODO List -->
+        <div class="widget">
+            <h3>Ma TODO Liste</h3>
+            <div class="todo-form">
+                <input type="text" id="todo-input" placeholder="Ajouter une tâche...">
+                <button onclick="ajouterTache()">Ajouter</button>
+            </div>
+            <ul id="todo-liste"></ul>
+        </div>
+    </section>
+
+    <!-- SECTION 3 : CONTACT -->
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <form onsubmit="alert('Message envoyé avec succès !'); return false;">
+            <input type="text" placeholder="Votre Nom" required>
+            <input type="email" placeholder="Votre Email" required>
+            <textarea placeholder="Votre Message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- SECTION 4 : CV / BLOG -->
+    <section id="cv">
+        <h2>Mon CV & Blog</h2>
+        <p>Téléchargez mon curriculum vitae ou lisez mes derniers articles sur la technologie.</p>
+        <!-- Remplacer le # par le lien de votre fichier CV -->
+        <a href="C:\Users\Me Constant\Documents\SFST\recherche d'emplois\CV_BELLE-FLEUR_BETHANIA.docx" class="btn-cv"
+            download>Télécharger mon CV (PDF)</a>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 - Projet Final SFSTWebClient2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
